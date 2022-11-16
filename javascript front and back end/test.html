@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<script>
+     function login(){
+        var uname = document.getElementById('username').value;
+    var pwd = document.getElementById('password').value;
+    //alert(uname+" "+pwd);
+    
+    let data={
+        email:uname,
+        password:pwd
+    }
+    console.log(JSON.stringify(data));
+    var data1=JSON.stringify(data)
+    console.log(data['email']);
+    var values=fetch("http://localhost:8080/user/sign_in",{
+        method:"POST",
+        body:JSON.stringify(data),
+        headers:{
+            "Content-Type":"application/json",
+            "Access-Control-Allow-Origin":"*"
+        }
+    }).then(response => response.json())
+    .then(json => console.log(json));
+   
+    if(data['email']==uname && data['password']==pwd){
+        console.log("Valid user");
+        
+
+    }else{
+        console.log("Invalid user");
+    }
+}    
+</script>
+<body>
+    <div id="login-div">
+        <h2>Login</h2>
+        Username:<input type="text" id = "username"><br><br>
+        Password:<input type="password" id = "password"><br><br>
+        <input  href="home.html" type="submit" value="Login" onclick="login()"> <br>
+        <a href="signup.html">Not yet registered? Please signUp</a>
+    </div>
+</body>
+</html>

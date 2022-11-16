@@ -1,0 +1,482 @@
+Web Applications:
+-----------------
+
+UI : User Interface
+
+WebPage:
+   which consist of web Elements.
+                    input,button,radio,checkbox
+
+
+HTML: Hyper Text Markup Language
+<> .....</>
+
+example:
+
+  <p>........</p>
+  <h1>.......</h1>
+
+
+filename.html
+-------------
+hello.html
+
+    <html>
+     
+       <p>.......</p>
+
+VSCODE to write UI code
+
+HTML 1.0
+HTML 2
+HTML 3.2
+HTML 4.0.1
+HTML 5:To make web page Resposive,Dynamic web Sites,SPA:Single Page Apps
+       <!DOCTYPTE html>
+
+       <meta charset = "UTF-8">
+
+
+
+Bootstrap:
+
+<!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+
+@CrossOrigin(origins="*") - use this annotation to overcome cors error
+
+
+
+
+
+NODEJS:(server)
+
+
+node -v 
+npm -v   to check versions
+
+from that folder we have to open cmd where the hello app we want to be pasted.
+
+npx create-react-app hello-app     
+
+cd hello-app
+
+npm start
+
+To stop react port - ctrl + c
+
+
+React:   React is working on nodejs server.
+=======
+
+Responsive,dynamic,SPA,ReactDOM,rendering,avoids reloading 
+
+JSX
+
+Routing:
+========
+
+localhost:3000/login
+localhost:3000/signup
+localhost:3000/home
+
+npm install react-router-dom
+
+npm install axios
+
+Hooks in React:
+
+const [email,setEmail] = useState(' ');
+
+Hooks is for reading email and password from backend.
+
+To add bootstrap in React:
+
+  npm install react-bootstrap bootstrap
+
+Axios Command for validating user:
+==================================
+
+npm install axios
+
+==================================
+
+ReactJS is running on the server nodejs 3000
+
+
+NEXT-JS:
+=========
+
+ The react framework for production Next.js gives you the best developer experience with all the features you need for production:hybrid,static
+ & server rendering ,Typescript support,smart bundling
+
+create new folder next-js from that folder open cmd
+
+npm install next react react-dom
+
+
+npm init
+
+hit enter enter .......
+
+create a new folder pages in app
+create a new file index.js
+
+"dev":"next",  - add this in package.json
+
+npm run dev
+
+
+getStaticProps,getStaticPaths,getServerSideProps are the methods  to get API.
+
+Testing ReactJS Application with Jest & Enzyme:
+=================================================
+
+npx create-react-app my-app
+
+npm start 
+
+npm install enzyme enzyme-adapter-react-16 --force
+
+*.test.js ---------> counter.test.js
+
+npm test
+
+
+WEB APP DEVELOPMENT:
+========================
+
+Model: MySql or NoSql <-localhost:3306 or localhost: 27017
+                          127.0.0.1
+Controller: <-localhost:8080 -springboot
+
+            java,kotlin,springboot,springmicroservices
+
+ReactJS: localhost:3000
+
+UI: html5 css3 js bootstrap React NextJS
+
+
+===================================================
+
+BUILD:
+---------
+
+      maven or gradle
+
+   maven - pom.xml
+   
+   Gradle- build.gradle
+
+ App is up and running
+
+
+
+================================================================
+Deploy -------> Development Server or Staging Server
+
+Staging environments are made to test codes,builds, and updates to ensure quality under a production like
+environment before application deployment.
+
+Stable,Up and running,secured,easy to access: Accessibility ,Reliability, Performance.....
+==================================================================================
+
+Deployment:
+--------------
+
+17 Developers:
+-----------------
+
+Module 1       UI     Backend DB
+     D1         Users   USERS-SERVICE     UsersDB
+      .
+      .
+      .
+      .
+     D17       ......    ................   .......
+
+SCM :Github
+
+Server :
+========
+
+AWS : Amazon web services
+
+==============================================================================
+
+Docker:
+--------
+
+   Installation
+
+   Hello World Execution
+ 
+   Docker --version
+
+   Docker run hello-world
+
+
+
+Configuration of spring project with docker:
+-----------------------------------------------
+
+1.Open spring project and make docker files configured in vs code
+
+2.Open that terminal in cmd where u have stored the docker project.
+
+3.dir
+
+4.docker -compose up -d
+
+Now ur project wil be configured in docker and up and running and image will be created.
+
+5.docker ps -a
+
+6.docker images
+
+7.docker-compose down  - service will be stopped.
+
+
+
+
+
+PUSHING IMAGE FROM DOCKER TO DOCKER HUB:
+===========================================
+
+Step 1: docker--->up and running
+
+Step 2:images should be created
+
+Step 3:create account in Dockerhub
+
+Step 4:Create a new repository with public access
+
+Step5: open cmd from that docker project folder
+    
+       login into docker ------->docker login
+
+Step 6:Create a tag:
+         
+           docker tag local-image-name username/new-created-repo-name:tagname
+
+Step 7:Push an image to docker hub:
+ 
+       docker push username/new-created-repo-name:tagname
+
+------------------------------------------------------------
+Finally image will be listed in docker hub after successful push.
+
+Now image is available for pull --->docker pull username/new-created-repo-name:tagname
+
+
+docker image prune --all --force   ====> The images will be deleted from docker app.After successful push that we can pull from dockerhub.
+
+
+
+Docker push commands:
+=====================
+
+docker login
+docker tag local-image-name username/new-created-repo-name:tagname
+docker push username/new-created-repo-name:tagname
+
+
+
+docker commands:
+================
+
+1.docker login 
+
+2.docker tag spring-db-app-docker-app arvinth97/docker-spring-app:myapp
+
+3.docker push arvinth97/docker-spring-app:myapp
+
+
+docker push for mysql image:
+================================
+
+1.docker login
+
+2.docker tag mysql:5.7 arvinth97/docker-spring-app:mydb
+
+3.docker push arvinth97/docker-spring-app:mydb
+
+4.docker images
+
+5.docker ps -a
+
+
+
+
+Jenkins:
+=========
+
+Installation:
+-------------
+
+Download msi file for windows
+
+link: https://www.jenkins.io/download/
+
+after this set path for java files
+
+Choose run in local port as  8081 or any
+
+then go to localhost:8081/manage/
+
+Jenkins ask for password
+
+copy the path and paste in system and get password
+
+After logging in change the password.
+
+now all set.
+
+For jenkins open :
+===================
+
+localhost:8081/manage/   ---------->use this path.
+
+
+
+Kafka:
+=======
+
+  Kafka qucikly evolved from messaging queue  to a full fledged event streaming platform capable   
+  of handling over 1 million messages per second or trillion messages per day.
+
+  Scalable
+  Fault Tolerant
+  A great publish-subscribe messaging system
+  Durable
+  Reliable
+  High performance
+
+Kafka commands:
+=================
+1.git init
+
+2.git clone https://github.com/conduktor/kafka-stack-docker-compose.git
+
+3.cd kafka-stack-docker-compose
+
+4.docker-compose -f zk-single-kafka-single.yml up -d
+
+5.docker exec -it kafka1 /bin/bash
+
+6.kafka-topics --version
+
+7.docker ps -a
+
+8..dir
+
+
+
+KUBERNETES:
+=============
+
+  Automating deployment,scaling and management of containers.
+
+
+1.Install minikube .exe file
+
+Then open powershell:
+----------------------
+
+minikube start
+
+kubectl get po -A
+
+minikube dashboard
+
+kubectl create deployment hello-minikube --image=docker.io/nginx:1.23
+kubectl expose deployment hello-minikube --type=NodePort --port=80
+
+minikube start
+
+minikube delete
+
+kubernetes with spring:
+
+open windows power shell and cd the path(cd D:\Deployment\kubernetes-springboot\demo)
+
+1.cd D:\Deployment\kubernetes-springboot\demo
+
+after navigating into this folder  do docker command
+
+2.docker build -t spring-boot-test .
+
+3.minikube start
+
+4.kubectl apply -f .\deployment.yaml
+
+5.minikube dashboard
+
+
+
+
+
+===============================================
+
+KUBERNETES DEPLOYMENT WITH SPRING:
+===================================
+
+Step1: create a new folder ------>kubernetes-springboot
+
+Step 2: open the spring project and add docker file and deployment.yaml 
+
+step 3: Docker: build an image
+
+        Navigate to location where we have dockerfile.
+        docker build -t spring-boot-test .// docker build wil only create image.docker compose will create image and up and running.
+   
+        To verify image is created successfully
+
+        docker images
+
+
+step 4:Push Image to Dockerhub:
+
+       docker login
+       docker tag spring-boot-test arvinth97/spring-boot-test:latest
+       docker push arvinth97/spring-boot-test:latest
+
+step 5: Make sure that in deployment.yml file image name is:
+       
+        image: username/repo-name:tag-name
+        image:arvinth97/spring-boot-test:latest
+
+step 6: Navigate to location where we have deployment.yml
+        make sure kubectl is up and running else execute : minikube start
+
+
+step 7: Execute: kubectl apply -f deployment.yaml
+
+step 8: kubectl get deployments
+
+step 9: minikube service spring-test-service
+
+step10:minikube dashboard
+
+step11:minikube stop
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
